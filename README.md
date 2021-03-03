@@ -16,5 +16,7 @@ export PATH=${PATH}:/usr/local/mysql/bin
     + [issue1](https://stackoverflow.com/questions/10577374/mysql-command-not-found-in-os-x-10-7)  
     + [issue2](https://stackoverflow.com/questions/10299148/mysql-error-1045-28000-access-denied-for-user-billlocalhost-using-passw)  
   
-**To Execute**
+**To Execute**  
 Go to './src' then run using python3 run.py
+  
+  
