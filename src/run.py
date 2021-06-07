@@ -207,7 +207,7 @@ def get_booking_information():
             rooms_info()
             print('\n\tSelect Room Type from the following option.')
             for i in range(len(li)):
-                print('\t\tPress '+ str(i)+' for '+ li[i])
+                print('\t\tPress '+ str(i)+' for '+ li[i][0])
         else:
             booking_room_type, cost = li[int(choice[0])]
             print('\tSelected Room Type: {} for {} days at Rs {} per day'.format(booking_room_type, days_stay, cost))
@@ -620,7 +620,7 @@ def home_screen(connect):
         print('\t HAPPY STAY')
         
         ## Add entry to DB
-        insert_query_b = '''INSERT INTO BOOKING_DETAILS VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'''
+        insert_query_b = '''INSERT INTO BOOKING_DETAILS VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')'''
         values = ( b_name, b_ph, b_add, b_ch_in, b_ch_out, b_room_type, b_stay, cost, b_room, b_id)
         cursor = connect.cursor()
         cursor.execute(insert_query_b % values)
